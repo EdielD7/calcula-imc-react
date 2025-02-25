@@ -16,7 +16,6 @@ body {
 .App-header {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
   align-items: center;
   justify-content: center;
   color: white;
@@ -27,31 +26,38 @@ body {
 
   h1 {
     font-size: 2em;
-    margin-bottom: 1rem;
+    margin-bottom: 32px;
   }
 
-  input {
-    padding: 0.5rem;
-    font-size: 1rem;
-    border-radius: 8px;
-    border: 1px solid transparent;
-    width: 200px;
-  }
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 24px;
 
-  button {
-    border-radius: 8px;
-    border: 1px solid transparent;
-    width: 200px;
-    padding: 0.6em 1.2em;
-    font-size: 1rem;
-    font-weight: 500;
-    font-family: inherit;
-    background-color: #3cf35b;
-    cursor: pointer;
-    transition: background-color 0.25s;
-
-    &:hover {
-      background-color: #aef3ba;
+    input {
+      padding: 0.5rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: 1px solid transparent;
+      width: 200px;
+    }
+  
+    button {
+      border-radius: 8px;
+      border: 1px solid transparent;
+      width: 200px;
+      padding: 0.6em 1.2em;
+      font-size: 1rem;
+      font-weight: 500;
+      font-family: inherit;
+      background-color: #3cf35b;
+      cursor: pointer;
+      transition: background-color 0.25s;
+  
+      &:hover {
+        background-color: #aef3ba;
+      }
     }
   }
 
