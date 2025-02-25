@@ -32,19 +32,24 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>Calculadora de IMC</h1>
-        <input
-          type="number"
-          placeholder="Peso (kg)"
-          value={peso}
-          onChange={(e) => setPeso(e.target.value)}
-        />
-        <input
-          type="number"
-          placeholder="Altura (m)"
-          value={altura}
-          onChange={(e) => setAltura(e.target.value)}
-        />
-        <button onClick={calcularIMC}>Calcular</button>
+        <form>
+          <label>Peso</label>
+          <input
+            type="number"
+            placeholder="Peso (kg)"
+            aria-label='Peso em quilogramas'
+            value={peso}
+            onChange={(e) => setPeso(e.target.value)}
+          />
+          <input
+            type="number"
+            placeholder="Altura (m)"
+            aria-label='Altura em metros'
+            value={altura}
+            onChange={(e) => setAltura(e.target.value)}
+          />
+          <button onClick={calcularIMC}>Calcular</button>
+        </form>
         <div className="resultado">
           <p>IMC: {imc !== null ? imc.toFixed(2) : ""}</p>
           <p>{imc !== null ? classificarIMC(imc) : ""}</p>
